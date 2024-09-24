@@ -33,3 +33,10 @@ def atualizar_usuario(id, nome, email, senha):
     cursor.execute('''UPDATE usuarios SET nome = ?, email = ?, senha = ? WHERE id = ?''', (nome, email, senha, id))
     conexao.commit()
     conexao.close()
+
+def deletar_usuario(id):
+    conexao = sql.connect('usuarios.db')
+    cursor = conexao.cursor()
+    cursor.execute('''DELETE FROM usuarios WHERE id = ?''', (id))
+    conexao.commit()
+    conexao.close()
