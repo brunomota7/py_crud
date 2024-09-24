@@ -10,3 +10,10 @@ def criar_tabela():
                     senha TEXT NOT NULL)''')
     conexao.commit()
     conexao.close()
+
+def adicionar_usuario(nome, email, senha):
+    conexao = sql.connect('usuarios.db')
+    cursor = conexao.cursor()
+    cursor.execute('''INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)''', (nome, email, senha))
+    conexao.commit()
+    conexao.close()
