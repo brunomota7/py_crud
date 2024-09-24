@@ -26,3 +26,10 @@ def listar_usuarios():
     for usuario in usuarios:
         print(usuario)
     conexao.close()
+
+def atualizar_usuario(id, nome, email, senha):
+    conexao = sql.connect('usuarios.db')
+    cursor = conexao.cursor()
+    cursor.execute('''UPDATE usuarios SET nome = ?, email = ?, senha = ? WHERE id = ?''', (nome, email, senha, id))
+    conexao.commit()
+    conexao.close()
