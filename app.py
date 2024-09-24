@@ -17,3 +17,12 @@ def adicionar_usuario(nome, email, senha):
     cursor.execute('''INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)''', (nome, email, senha))
     conexao.commit()
     conexao.close()
+
+def listar_usuarios():
+    conexao = sql.connect('usuarios.db')
+    cursor = conexao.cursor()
+    cursor.execute('''SELECT * FROM usuarios''')
+    usuarios = cursor.fetchall()
+    for usuario in usuarios:
+        print(usuario)
+    conexao.close()
