@@ -40,3 +40,12 @@ def deletar_usuario(id):
     cursor.execute('''DELETE FROM usuarios WHERE id = ?''', (id))
     conexao.commit()
     conexao.close()
+
+def menu():
+    print("\n1. Adicionar usuário")
+    print("2. Listar usuários")
+    print("3. Atualizar usuário")
+    print("4. Deletar usuário")
+    print("5. Sair")
+
+criar_tabela()
