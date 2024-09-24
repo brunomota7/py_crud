@@ -85,7 +85,7 @@ DELETE FROM usuarios WHERE id = ?;
 <h2 align="center" style="font-family: Arial, sans-serif; color: #4A90E2;">🛠️ Como Executar o Projeto</h2>
 <ol style="font-family: Arial, sans-serif; max-width: 800px; margin: auto;">
     <li>Clone o repositório para sua máquina local:</li>
-    <pre style="font-family: Arial, sans-serif;">git clone https://github.com/seu-usuario/seu-repositorio.git</pre>
+    <pre style="font-family: Arial, sans-serif;">git clone https://github.com/brunomota7/py_crud</pre>
     <li>Navegue até o diretório do projeto:</li>
     <pre style="font-family: Arial, sans-serif;">cd seu-repositorio</pre>
     <li>Execute o script Python:</li>
